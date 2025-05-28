@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmazonQradius</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="power-meter">
+            <div class="power-slot" id="speed-up">Speed-Up</div>
+            <div class="power-slot" id="missile">Missile</div>
+            <div class="power-slot" id="double">Double</div>
+            <div class="power-slot" id="laser">Laser</div>
+            <div class="power-slot" id="option">Option</div>
+            <div class="power-slot" id="shield">Shield</div>
+        </div>
+        <div class="game-info">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="lives">Lives: <span id="lives">3</span></div>
+            <div class="stage">Stage: <span id="stage">1</span></div>
+        </div>
+        <div id="start-screen" class="overlay">
+            <h1>AmazonQradius</h1>
+            <p>Press ENTER to Start</p>
+            <div class="controls">
+                <p>Controls:</p>
+                <ul>
+                    <li>Arrow Keys: Move</li>
+                    <li>Z: Shot/Laser</li>
+                    <li>X: Missile</li>
+                    <li>Space: Power-Up Select</li>
+                </ul>
+            </div>
+        </div>
+        <div id="game-over" class="overlay hidden">
+            <h1>GAME OVER</h1>
+            <p>Score: <span id="final-score">0</span></p>
+            <p>Press ENTER to Restart</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
