@@ -261,21 +261,8 @@ class Game {
             return;
         }
         
-        // ゲームオーバー画面
+        // ゲームオーバー画面（HTMLオーバーレイを使用するため、ここでは描画しない）
         if (this.state === GAME_STATE.GAME_OVER) {
-            this.ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
-            this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
-            
-            this.ctx.fillStyle = '#f00';
-            this.ctx.font = '48px Arial';
-            this.ctx.textAlign = 'center';
-            this.ctx.fillText('GAME OVER', this.canvas.width / 2, 200);
-            
-            this.ctx.fillStyle = '#fff';
-            this.ctx.font = '24px Arial';
-            this.ctx.fillText(`Score: ${this.score}`, this.canvas.width / 2, 250);
-            this.ctx.fillText('Press ENTER to Restart', this.canvas.width / 2, 300);
-            
             return;
         }
         
