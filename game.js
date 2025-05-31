@@ -167,8 +167,10 @@ class Game {
         // 描画
         this.render();
         
-        // 次のフレーム
-        requestAnimationFrame(this.gameLoop.bind(this));
+        // 次のフレーム - 10ms間隔で実行するように設定
+        setTimeout(() => {
+            requestAnimationFrame(this.gameLoop.bind(this));
+        }, 10);
     }
     
     update(deltaTime) {
